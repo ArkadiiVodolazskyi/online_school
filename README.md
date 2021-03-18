@@ -1,11 +1,4 @@
-Задачи:
-
-Набросать страницы на Tailwind:
-
-- Главная с формой регистрации
-- Статичные страницы
-- Страницы с формами для изменения/составления
-  уроков
+sass --watch docs/sass/main.sass:docs/css/main.css --sourcemap=none --no-cache
 
 Оригинал сайта
 https://online-shkola.com.ua/
