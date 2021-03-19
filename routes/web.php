@@ -12,11 +12,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::prefix('/admin')->group(function() {
-    Route::get('/pages', [AdminPageController::class, 'list']);
-    Route::get('/page', [AdminPageController::class, 'form']);
-    Route::post('/page', [AdminPageController::class, 'save']);
-    Route::get('/delete_page', [AdminPageController::class, 'delete']);
+Route::prefix('/admin')->middleware(['can:use admin panel'])->group(function() {
+    Route::middleware(['can:view pages'])->get('/pages', [AdminPageController::class, 'list']);
+    Route::middleware(['can:update pages'])->get('/page', [AdminPageController::class, 'form']);
+    Route::middleware(['can:update pages'])->post('/page', [AdminPageController::class, 'save']);
+    Route::middleware(['can:delete pages'])->get('/delete_page', [AdminPageController::class, 'delete']);
 });
 
 Route::get('/{slug}', PageController::class);
