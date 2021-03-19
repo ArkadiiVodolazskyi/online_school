@@ -3,8 +3,8 @@
     <form class="" action="" method="post">
         @csrf
         <input type="hidden" name="id" value="{{ $item->id }}">
-        <input type="text" name="slug" value="{{ $item->slug }}"><br>
-        <input type="text" name="title" value="{{ $item->title }}"><br>
+        <livewire:slug-input slug="{{ $item->slug }}" table="pages" itemId="{{ $item->id }}" />
+        <x-sluggable name="title" value="{{ $item->title }}" />
         <label>
             <input type="checkbox" name="publish" value="1" {{ $item->publish ? 'checked' : '' }}>
             Publish
