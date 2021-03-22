@@ -27,6 +27,9 @@ class UserSeeder extends Seeder
 
         $admin_role = Role::create(['name' => 'admin']);
 
+        Role::create(['name' => 'teacher']);
+        Role::create(['name' => 'student']);
+
         Permission::create(['name' => 'use admin panel']);
         Permission::create(['name' => 'view pages']);
         Permission::create(['name' => 'update pages']);
