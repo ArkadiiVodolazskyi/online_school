@@ -1,0 +1,327 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+html, * {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  --tw-gradient-from: #d1d5db;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(209, 213, 219, 0));
+  --tw-gradient-to: #e5e7eb;
+  min-height: 100vh;
+  position: relative;
+}
+
+a, .btn {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 300ms;
+}
+
+.btn {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  text-transform: capitalize;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 300ms;
+}
+
+.checkbox {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+  letter-spacing: 0.025em;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 300ms;
+}
+
+.checkbox input[type=checkbox] {
+  border-style: none;
+  cursor: pointer;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  width: 1.25rem;
+}
+
+.page_title {
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+  --tw-gradient-from: #3b82f6;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(59, 130, 246, 0));
+  --tw-gradient-to: #1d4ed8;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  letter-spacing: 0.025em;
+}
+
+.create_page_form {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
+  width: 50%;
+}
+
+@media (max-width: 1535px){
+  .create_page_form{
+    width: 75%;
+  }
+}
+
+@media (max-width: 767px){
+  .create_page_form{
+    width: 91.666667%;
+  }
+}
+
+.create_page_form input[type=text] {
+  border-color: transparent;
+}
+
+.create_page_form input[type=text]:focus{
+  --tw-border-opacity: 1;
+  border-color: rgba(154, 213, 202, var(--tw-border-opacity));
+}
+
+.create_page_form input[type=text]{
+  border-radius: 0.375rem;
+  border-width: 2px;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-top: 2rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-text-opacity: 1;
+  color: rgba(41, 41, 41, var(--tw-text-opacity));
+  width: 24rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.create_page_form input[type=submit] {
+  --tw-bg-opacity: 1;
+  background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
+}
+
+.create_page_form input[type=submit]:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+}
+
+.create_page_form input[type=submit]{
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.summernote_editor .note-editor.note-airframe, .summernote_editor .note-editor.note-frame {
+  border-color: transparent;
+}
+
+.summernote_editor .note-toolbar {
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+  --tw-gradient-from: #60a5fa;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(96, 165, 250, 0));
+  --tw-gradient-to: #2563eb;
+}
+
+.summernote_editor .note-toolbar button > i {
+  --tw-text-opacity: 1;
+  color: rgba(41, 41, 41, var(--tw-text-opacity));
+}
+
+.summernote_editor .note-toolbar.fixed {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.summernote_editor .note-editing-area {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #f9fafb;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(249, 250, 251, 0));
+  --tw-gradient-to: #f3f4f6;
+  --tw-border-opacity: 1;
+  border-color: rgba(41, 41, 41, var(--tw-border-opacity));
+  --tw-border-opacity: 0.2;
+  border-width: 1px;
+  padding-bottom: 3rem;
+  --tw-text-opacity: 1;
+  color: rgba(41, 41, 41, var(--tw-text-opacity));
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable > * {
+  border-color: transparent;
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable > *:hover{
+  --tw-border-opacity: 1;
+  border-color: rgba(41, 41, 41, var(--tw-border-opacity));
+  --tw-border-opacity: 0.2;
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable > *{
+  border-width: 1px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable h1, .summernote_editor .note-editor.note-frame .note-editing-area .note-editable h1 > * {
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable h2, .summernote_editor .note-editor.note-frame .note-editing-area .note-editable h2 > * {
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable h3, .summernote_editor .note-editor.note-frame .note-editing-area .note-editable h3 > * {
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable h4, .summernote_editor .note-editor.note-frame .note-editing-area .note-editable h4 > * {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable h5, .summernote_editor .note-editor.note-frame .note-editing-area .note-editable h5 > * {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable h6, .summernote_editor .note-editor.note-frame .note-editing-area .note-editable h6 > * {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable ul {
+  list-style-type: disc;
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable ol {
+  list-style-type: decimal;
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable li {
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable table td {
+  --tw-border-opacity: 1;
+  border-color: rgba(41, 41, 41, var(--tw-border-opacity));
+  --tw-border-opacity: 0.3;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
+.summernote_editor .note-editor.note-frame .note-editing-area .note-editable img, .summernote_editor .note-editor.note-frame .note-editing-area .note-editable video {
+  display: inline-block;
+  margin: 0.25rem;
+  vertical-align: top;
+}
+
+.summernote_editor .note-editor.note-frame .note-statusbar:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgba(191, 219, 254, var(--tw-bg-opacity));
+}
+
+.summernote_editor .note-editor.note-frame .note-statusbar{
+  --tw-border-opacity: 1;
+  border-color: rgba(41, 41, 41, var(--tw-border-opacity));
+  --tw-border-opacity: 0.2;
+  border-top-width: 0px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 300ms;
+}
+
+.summernote_editor .note-editor.note-frame .note-statusbar .note-resizebar {
+  padding: 0px;
+}
+
+.summernote_editor .note-editor.note-frame .note-statusbar .note-resizebar .note-icon-bar {
+  --tw-border-opacity: 1;
+  border-color: rgba(41, 41, 41, var(--tw-border-opacity));
+  --tw-border-opacity: 0.7;
+  margin-top: 0.125rem;
+  width: 1.5rem;
+}

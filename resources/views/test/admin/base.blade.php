@@ -9,6 +9,15 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+        {{-- Custom styles --}}
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
+        {{-- Favicon --}}
+        <link rel="icon" href="{{ URL::asset('/img/favicon.svg') }}" type="image/x-icon"/>
+
+        {{-- Font --}}
+
+
         @livewireStyles
 
         <!-- Scripts -->
@@ -18,18 +27,9 @@
         <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
-        <style media="screen">
-            .html_component h1 {
-                font-size: 4rem;
-                font-weight: bold;
-            }
-
-            .html_component p {
-                color: red;
-            }
-        </style>
     </head>
-    <body>
+    <body style="padding-bottom: 300vh">
+
         @if ($errors->any())
             <h4>Errors: </h4>
             <div>
@@ -53,20 +53,45 @@
                 <script>
                 $(function() {
                     $('.summernote').summernote({
-                      placeholder: 'Hello stand alone ui',
+                      placeholder: 'Type something...',
                       tabsize: 2,
-                      height: 120,
+                      dialogsFade: true,
                       toolbar: [
-                        ['style', ['style']],
-                        ['font', ['bold', 'underline', 'clear']],
-                        ['color', ['color']],
-                        ['para', ['ul', 'ol', 'paragraph']],
-                        ['table', ['table']],
-                        ['insert', ['link', 'picture', 'video']],
-                        ['view', ['fullscreen', 'help']]
-                      ]
+                            ['style', ['style']],
+                            ['font', ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'clear']],
+                            ['fontsize', ['fontsize']],
+                            ['height', ['height']],
+                            ['color', ['color']],
+                            ['para', ['ul', 'ol', 'paragraph']],
+                            ['table', ['table']],
+                            ['insert', ['link', 'picture', 'video']],
+                            ['view', ['fullscreen', 'help']]
+                        ],
                     });
                 });
+
+                window.addEventListener('load', () => {
+                    // Make SN Toolbar fixed on scroll
+                    (function() {
+                        const SNToolbar = document.querySelector('.summernote_editor .note-toolbar');
+
+                        if (SNToolbar) {
+
+                            SNTop = SNToolbar.getBoundingClientRect().top;
+
+                            window.addEventListener('scroll', () => {
+                                console.log(window.scrollY, SNTop);
+                                if (window.scrollY >= SNTop) {
+                                    SNToolbar.classList.add('fixed');
+                                } else {
+                                    SNToolbar.classList.remove('fixed');
+                                }
+                            });
+
+                        }
+                    })();
+                });
+
                 </script>
             @endpush
         @endonce

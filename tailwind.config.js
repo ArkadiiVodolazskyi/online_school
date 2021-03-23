@@ -13,6 +13,23 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                transparent: 'transparent',
+                dark:   { DEFAULT: '#292929' },
+                dblue:  { DEFAULT: '#114B5F' },
+                red:    { DEFAULT: '#DC0445' },
+                lblue:  { DEFAULT: '#1098F7' },
+                lgreen: { DEFAULT: '#9AD5CA' },
+                cream:  { DEFAULT: '#E0E0E0' },
+            },
+        },
+        // Switch to desktop first
+        screens: {
+            '2xl': {'max': '1535px'},
+            'xl': {'max': '1279px'},
+            'lg': {'max': '1023px'},
+            'md': {'max': '767px'},
+            'sm': {'max': '479px'},
         },
     },
 
