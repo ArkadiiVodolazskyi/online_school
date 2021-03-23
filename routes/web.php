@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\Admin\PageController as AdminPageController;
+use App\Http\Controllers\Admin\UserController;
 use Laravel\Jetstream\Http\Controllers\Livewire\UserProfileController;
 
 Route::get('/', function () {
@@ -20,6 +21,11 @@ Route::prefix('/admin')->middleware(['auth:sanctum', 'verified', 'can:use admin 
     Route::middleware(['can:update pages'])->get('/page', [AdminPageController::class, 'form']);
     Route::middleware(['can:update pages'])->post('/page', [AdminPageController::class, 'save']);
     Route::middleware(['can:delete pages'])->get('/delete_page', [AdminPageController::class, 'delete']);
+
+    Route::middleware(['can:view users'])->get('/users', [UserController::class, 'list']);
+    Route::middleware(['can:update users'])->get('/user', [UserController::class, 'form']);
+    Route::middleware(['can:update users'])->post('/user', [UserController::class, 'save']);
+    Route::middleware(['can:delete users'])->get('/delete_user', [UserController::class, 'delete']);
 });
 
 Route::get('/{slug}', PageController::class);
