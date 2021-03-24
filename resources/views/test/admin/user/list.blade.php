@@ -12,10 +12,12 @@
                 <tr>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->email }}</td>
-                    <td>{{ $item->roles->join(', ') }}</td>
+                    <td>{{ $item->roles->map(function($item) {
+                        return $item->name;
+                    })->join(', ') }}</td>
                     <td><a href="user?id={{ $item->id }}">edit</a> | <a href="delete_user?id={{ $item->id }}">delete</a></td>
                 </tr>
             @endforeach
-        </table>        
+        </table>
     @endif
 </x-test-admin-app-layout>

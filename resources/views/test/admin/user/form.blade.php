@@ -13,12 +13,15 @@
 
         <div class="">
             <label>Role: </label>
-            <select class="" name="">
-                <option>-- select --</option>
                 @foreach ($roles as $role)
-                    <option value="{{ $role->id }}" {{ $item->roles->first() == $role ? 'selected' : '' }}>{{ $role->name }}</option>
+                    <div class="">
+                        <label>
+                            <input type="radio" name="role" value="{{ $role->id }}" {{ $item->roles->first() && $item->roles->first()->id == $role->id ? 'checked' : '' }}>
+                            {{ $role->name }}
+                        </label>
+                        <p>{{ $role->description }}</p>
+                    </div>
                 @endforeach
-            </select>
         </div>
 
         <div class="">
@@ -26,7 +29,7 @@
         </div>
 
         <div class="">
-            <input type="password" name="password" value="" placeholder="password confirmation">
+            <input type="password" name="password_confirmation" value="" placeholder="password confirmation">
         </div>
 
         <input type="submit" value="submit">

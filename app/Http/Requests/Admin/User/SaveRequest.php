@@ -4,32 +4,29 @@ namespace App\Http\Requests\Admin\User;
 
 use App\Http\Requests\Admin\SaveRequest as Base;
 use Illuminate\Validation\Rule;
-use Illuminate\Support\Str;
+use App\Models\User;
 
 class SaveRequest extends Base
 {
     public function rules()
     {
         $rules = [
-            'title' => 'required|string|max:255',
-            'page_content' => 'sometimes|nullable|string',
-            'publish' => 'required|boolean',
-            'id' => ['sometimes', 'nullable', 'integer'],
-            'slug' => ['required', 'string', 'max:255']
+            'name' => 'required|string|max:255',
+            'role' => 'required|integer|min:1',
+            'id' => 'sometimes|nullable|integer',
+            'email' => ['required', 'string', 'email', 'max:255']
         ];
 
-        $rules['id'] = Rule::unique('pages')->ignore($this->id);
-        $rules['slug'][] = Rule::unique('pages')->ignore($this->id);
+
+        $user = User::find($this->id);
+        if ($user) {
+            $rules['password'] = 'sometimes|nullable|confirmed|regex:/^[a-zA-Z0-9]{8,}$/';
+        } else {
+            $rules['password'] = 'required|confirmed|regex:/^[a-zA-Z0-9]{8,}$/';
+        }
+
+        $rules['email'][] = Rule::unique('users')->ignore($this->id);
 
         return $rules;
-    }
-
-    public function prepareForValidation()
-    {
-        parent::prepareForValidation();
-        $this->merge([
-            'publish' => !!$this->publish,
-            'page_content' => trim($this->page_content ?? '')
-        ]);
     }
 }

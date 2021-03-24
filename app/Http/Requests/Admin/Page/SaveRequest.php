@@ -14,11 +14,9 @@ class SaveRequest extends Base
             'title' => 'required|string|max:255',
             'page_content' => 'sometimes|nullable|string',
             'publish' => 'required|boolean',
-            'id' => ['sometimes', 'nullable', 'integer'],
+            'id' => 'sometimes|nullable|integer',
             'slug' => ['required', 'string', 'max:255']
         ];
-
-        $rules['id'] = Rule::unique('pages')->ignore($this->id);
         $rules['slug'][] = Rule::unique('pages')->ignore($this->id);
 
         return $rules;

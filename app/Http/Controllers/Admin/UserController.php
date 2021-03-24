@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -32,23 +33,24 @@ class UserController extends Controller
 
     public function save(SaveRequest $request)
     {
-        $item = Page::findOrNew($request->id);
+        $item = User::findOrNew($request->id);
 
-        $item->slug = $request->slug;
-        $item->title = $request->title;
-        $item->publish = !!$request->publish;
+        $item->name = $request->name;
+        $item->email = $request->email;
+
+        if ($request->password) {
+            $item->password = Hash::make($request->password);
+        }
 
         $item->save();
 
-        $item->contents()->delete();
+        $role = Role::find($request->role);
 
-        $content = new PageContent();
-        $content->type_id = 1;
-        $content->content = $request->page_content;
+        $item->roles()->detach();
 
-        $item->contents()->save($content);
+        $item->assignRole($role);
 
-        return redirect('/admin/pages')->with([
+        return redirect('/admin/users')->with([
             'status' => 'success',
             'message' => 'changes saved successfully'
         ]);
