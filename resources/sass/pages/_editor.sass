@@ -1,0 +1,61 @@
+// Custom styles -----------------------
+.page_title
+    @apply text-center py-3 text-white font-bold text-2xl tracking-wide shadow-lg bg-gradient-to-l from-blue-500 to-blue-700
+.create_page_form
+    @apply px-6 pb-4 w-1/2 2xl:w-9/12 md:w-11/12 mx-auto
+    input[type=text]
+        @apply text-lg text-dark font-medium shadow-md w-96 mt-8 rounded-md py-2 px-3 border-2 border-transparent focus:border-lgreen outline-none transition-all
+    input[type=submit]
+        @apply btn text-xl py-2 px-5 bg-blue-400 text-white hover:bg-blue-600
+
+// Style Summernote editor
+.summernote_editor
+    .note-editor.note-airframe, .note-editor.note-frame
+        @apply border-transparent
+    .note-toolbar
+        @apply bg-gradient-to-l from-blue-400 to-blue-600
+        button > i
+            @apply text-dark
+        // Can't use @apply twice on same element
+        &.fixed
+            position: fixed
+            z-index: 1000
+            width: 100%
+            top: 0
+            left: 50%
+            transform: translate(-50%, 0)
+            text-align: center
+    .note-editing-area
+        @apply text-dark border border-dark border-opacity-20 bg-gradient-to-b from-gray-50 to-gray-100 pb-12
+    .note-editor.note-frame .note-editing-area .note-editable
+        @apply px-6 py-8
+        > *
+            @apply mb-4 p-2 border border-transparent hover:border-dark hover:border-opacity-20 transition-all
+        h1, h1 > *
+            @apply text-5xl font-black my-8
+        h2, h2 > *
+            @apply text-4xl font-extrabold my-7
+        h3, h3 > *
+            @apply text-3xl font-bold my-6
+        h4, h4 > *
+            @apply text-2xl font-semibold my-5
+        h5, h5 > *
+            @apply text-xl font-medium
+        h6, h6 > *
+            @apply text-lg font-normal
+        ul
+            @apply list-disc
+        ol
+            @apply list-decimal
+        li
+            @apply my-0.5
+        table td
+            @apply border-dark border-opacity-30 py-1.5 px-2
+        img, video
+            @apply inline-block align-top m-1
+    .note-editor.note-frame .note-statusbar
+        @apply border-t-0 border-l border-r border-b border-dark border-opacity-20 h-4 flex items-center justify-center hover:bg-blue-200 transition-all duration-300
+        .note-resizebar
+            @apply p-0
+            .note-icon-bar
+                @apply w-6 mt-0.5 border-dark border-opacity-70

@@ -13,6 +13,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::prefix('/admin')->middleware(['can:use admin panel'])->group(function() {
+    Route::middleware(['can:view pages'])->get('/home', function () {
+        return view('home');
+    })->name('home');
     Route::middleware(['can:view pages'])->get('/pages', [AdminPageController::class, 'list']);
     Route::middleware(['can:update pages'])->get('/page', [AdminPageController::class, 'form']);
     Route::middleware(['can:update pages'])->post('/page', [AdminPageController::class, 'save']);

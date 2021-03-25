@@ -1,8 +1,13 @@
 <x-test-admin-app-layout>
-    <h1>Pages</h1>
+    <h1 class="page_title">Pages</h1>
     @foreach ($items as $item)
-        <div>
-            <a href="page?id={{ $item->id }}">{{ $item->slug }}</a> | <a href="delete_page?id={{ $item->id }}">delete</a>
+        <div class="page_item">
+            <a href="page?id={{ $item->id }}" class="item_title">
+                {{ $item->slug }}
+            </a>
+            <a href="delete_page?id={{ $item->id }}" class="item_delete">
+                delete
+            </a>
         </div>
     @endforeach
 </x-test-admin-app-layout>

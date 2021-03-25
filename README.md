@@ -1,26 +1,39 @@
 
-Pages to style:
-http://127.0.0.1:8000/admin/pages
-+ http://127.0.0.1:8000/admin/page?id=1 или http://127.0.0.1:8000/admin/page?id=2
-http://127.0.0.1:8000/test-page-1 или http://127.0.0.1:8000/test-page-2
-http://127.0.0.1:8000/dashboard - app.blade
-http://127.0.0.1:8000/user/profile
+# Pages to style:
+1. ** http://127.0.0.1:8000/admin/page?id=1 ** или ** http://127.0.0.1:8000/admin/page?id=2 **
+2. ** http://127.0.0.1:8000/admin/pages **
+3. ** http://127.0.0.1:8000/test-page-1 ** или ** http://127.0.0.1:8000/test-page-2 **
+4. ** http://127.0.0.1:8000/dashboard **
+5. ** http://127.0.0.1:8000/user/profile **
+6. ** http://127.0.0.1:8000/admin/home **
 
-<!-- Todo -->
+---
+
+# Questions:
 - How to add placeholders to from's inputs?
 - Add styles to inputs' validation messages below.
 
-<!-- Added -->
+---
+
+# Added:
 + Favicon
 + Colors to TW palette
 + Switched TW media to desktop first
++ Some order in Sass files
++ Some styles
++ Home page blade template - http://127.0.0.1:8000/admin/home
 + Custom styles for:
-  + admin/page?id=...
+    + admin/page?id=...
+    + home page
 
-<!-- Tags to style in SN editor -->
-+ h1, h2, h3, h4, h5, h6
-+ p
-+ ul, ol, li
-+ table, tbody, tr, td
-- a
-+ img, iframe (video)
+---
+
+## Home page:
++ blade
++ route
+wrappers
+sections
+content
+adaptive
+header hovers
+colors

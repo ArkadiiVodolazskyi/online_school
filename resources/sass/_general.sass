@@ -1,0 +1,40 @@
+// Colors -----------------------
+$dark:   #292929
+$dblue:  #114B5F
+$red:    #DC0445
+$lblue:  #1098F7
+$lgreen: #9AD5CA
+$cream:  #E0E0E0
+
+// General styles -----------------------
+html
+    overflow-x: hidden
+html, *
+    font-family: 'Roboto', sans-serif
+    font-size: 16px
+body
+    @apply bg-gradient-to-br from-gray-300 to-gray-200 min-h-screen relative overflow-x-hidden
+
+a, .btn
+    @apply transition-all duration-300
+
+// Reusable classes -----------------------
+.wrapper
+    width: 1280px
+    @apply mx-auto xl:w-11/12
+.btn
+    @apply font-medium rounded-lg shadow cursor-pointer transition-all duration-300 capitalize
+.checkbox
+    @apply flex items-center my-6 font-medium text-lg cursor-pointer transition-all duration-300 capitalize tracking-wide w-min
+    input[type=checkbox]
+        @apply w-5 h-5 mr-2 cursor-pointer border-none
+
+// Advance TW classes
+.inset-center
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+.top-center
+    top: 0
+    left: 50%
+    transform: translate(-50%, 0)

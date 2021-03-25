@@ -15,9 +15,6 @@
         {{-- Favicon --}}
         <link rel="icon" href="{{ URL::asset('/img/favicon.svg') }}" type="image/x-icon"/>
 
-        {{-- Font --}}
-
-
         @livewireStyles
 
         <!-- Scripts -->
@@ -28,7 +25,7 @@
         <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
     </head>
-    <body style="padding-bottom: 300vh">
+    <body>
 
         @if ($errors->any())
             <h4>Errors: </h4>
@@ -46,7 +43,11 @@
             <p>{{ session('message') }}</p>
         @endif
 
-        {{ $slot }}
+        <main>
+            <div class="wrapper">
+                {{ $slot }}
+            </div>
+        </main>
 
         @once
             @push('footer_scripts')
@@ -80,7 +81,6 @@
                             SNTop = SNToolbar.getBoundingClientRect().top;
 
                             window.addEventListener('scroll', () => {
-                                console.log(window.scrollY, SNTop);
                                 if (window.scrollY >= SNTop) {
                                     SNToolbar.classList.add('fixed');
                                 } else {

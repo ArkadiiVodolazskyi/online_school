@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+html {
+  overflow-x: hidden;
+}
+
 html, * {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -10,6 +14,7 @@ body {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(209, 213, 219, 0));
   --tw-gradient-to: #e5e7eb;
   min-height: 100vh;
+  overflow-x: hidden;
   position: relative;
 }
 
@@ -20,16 +25,22 @@ a, .btn {
   transition-duration: 300ms;
 }
 
+.wrapper {
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1279px){
+  .wrapper{
+    width: 91.666667%;
+  }
+}
+
 .btn {
   border-radius: 0.5rem;
   cursor: pointer;
   font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   text-transform: capitalize;
@@ -65,6 +76,69 @@ a, .btn {
   height: 1.25rem;
   margin-right: 0.5rem;
   width: 1.25rem;
+}
+
+.inset-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-center {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+section.how_we_teach .slick-slide {
+  transition: all 0.3s linear;
+}
+
+section.how_we_teach .slick-slide:not(.slick-current) {
+  opacity: 0;
+}
+
+section.how_we_teach .slick-list {
+  order: 2;
+}
+
+section.how_we_teach .slick-dots {
+  order: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+section.how_we_teach .slick-dots li {
+  margin: 0 2rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+  color: #fff;
+  cursor: pointer;
+}
+
+section.courses .slick-list {
+  overflow: hidden;
+  padding: 2rem 1rem;
+}
+
+section.courses button {
+  position: absolute;
+  z-index: 200;
+  top: 50%;
+  font-size: 2rem;
+  color: blue;
+}
+
+section.courses button:nth-of-type(1) {
+  left: 0;
+  transform: translate(-180%, -50%);
+}
+
+section.courses button:nth-of-type(2) {
+  right: 0;
+  transform: translate(180%, -50%);
 }
 
 .page_title {
@@ -149,8 +223,34 @@ a, .btn {
 }
 
 .create_page_form input[type=submit]{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+a, .create_page_form input[type=submit] {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 300ms;
+}
+
+.create_page_form input[type=submit] {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  text-transform: capitalize;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 300ms;
 }
 
 .summernote_editor .note-editor.note-airframe, .summernote_editor .note-editor.note-frame {
@@ -176,6 +276,7 @@ a, .btn {
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
+  text-align: center;
 }
 
 .summernote_editor .note-editing-area {
@@ -324,4 +425,68 @@ a, .btn {
   --tw-border-opacity: 0.7;
   margin-top: 0.125rem;
   width: 1.5rem;
+}
+
+.page_item {
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+  --tw-gradient-from: #f3f4f6;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(243, 244, 246, 0));
+  --tw-gradient-to: #bfdbfe;
+  border-bottom-width: 2px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.page_item .item_title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.page_item .item_delete {
+  --tw-bg-opacity: 1;
+  background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+}
+
+.page_item .item_delete:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgba(153, 27, 27, var(--tw-bg-opacity));
+}
+
+.page_item .item_delete{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-left: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+a, .page_item .item_delete {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 300ms;
+}
+
+.page_item .item_delete {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  text-transform: capitalize;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 300ms;
 }
