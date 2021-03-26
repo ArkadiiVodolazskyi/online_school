@@ -134,177 +134,177 @@
       <!-- Cards - Pros -->
       <section class="pros my-10">
         <div class="wrapper">
-            <h2 class="text-center text-4xl font-bold">Почему мы</h2>
-        <div class="p-8 flex flex-wrap items-center justify-center">
-          <!-- Сard -->
-          <div
-            class="flex-shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg w-1/3"
-          >
-            <div class="relative pt-10 px-10 flex items-center justify-center">
-              <div
-                class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
-                style="
-                  background: radial-gradient(black, transparent 60%);
-                  transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1);
-                  opacity: 0.2;
-                "
-              ></div>
-              <img
-                class="relative w-40"
-                src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                alt=""
-              />
-            </div>
-            <div class="relative px-6 pb-6 mt-6">
-              <div class="flex justify-between">
-                <span class="block font-semibold text-xl text-gray-700"
-                  >Peace Lily</span
-                >
+          <h2 class="text-center text-4xl font-bold">Почему мы</h2>
+          <div class="p-8 flex flex-wrap items-center justify-center">
+            <!-- Сard -->
+            <div
+              class="flex-shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-xl w-1/3 bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-900 border-opacity-10"
+            >
+              <div class="relative pt-10 px-10 flex items-center justify-center">
+                <div
+                  class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
+                  style="
+                    background: radial-gradient(black, transparent 60%);
+                    transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1);
+                    opacity: 0.2;
+                  "
+                ></div>
+                <img
+                  class="relative w-40"
+                  src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
+                  alt=""
+                />
               </div>
-              <span class="block opacity-75 -mb-1 text-gray-700">Indoor</span>
+              <div class="relative px-6 pb-6 mt-6">
+                <div class="flex justify-between">
+                  <span class="block font-semibold text-xl text-gray-700"
+                    >Peace Lily</span
+                  >
+                </div>
+                <span class="block opacity-75 -mb-1 text-gray-700">Indoor</span>
+              </div>
+            </div>
+            <!-- Сard -->
+            <div
+              class="flex-shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg w-1/3"
+            >
+              <div class="relative pt-10 px-10 flex items-center justify-center">
+                <div
+                  class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
+                  style="
+                    background: radial-gradient(black, transparent 60%);
+                    transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1);
+                    opacity: 0.2;
+                  "
+                ></div>
+                <img
+                  class="relative w-40"
+                  src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
+                  alt=""
+                />
+              </div>
+              <div class="relative px-6 pb-6 mt-6">
+                <div class="flex justify-between">
+                  <span class="block font-semibold text-xl text-gray-700"
+                    >Peace Lily</span
+                  >
+                </div>
+                <span class="block opacity-75 -mb-1 text-gray-700">Indoor</span>
+              </div>
+            </div>
+            <!-- Сard -->
+            <div
+              class="flex-shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg w-1/3"
+            >
+              <div class="relative pt-10 px-10 flex items-center justify-center">
+                <div
+                  class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
+                  style="
+                    background: radial-gradient(black, transparent 60%);
+                    transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1);
+                    opacity: 0.2;
+                  "
+                ></div>
+                <img
+                  class="relative w-40"
+                  src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
+                  alt=""
+                />
+              </div>
+              <div class="relative px-6 pb-6 mt-6">
+                <div class="flex justify-between">
+                  <span class="block font-semibold text-xl text-gray-700"
+                    >Peace Lily</span
+                  >
+                </div>
+                <span class="block opacity-75 -mb-1 text-gray-700">Indoor</span>
+              </div>
+            </div>
+            <!-- Сard -->
+            <div
+              class="flex-shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg w-1/3"
+            >
+              <div class="relative pt-10 px-10 flex items-center justify-center">
+                <div
+                  class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
+                  style="
+                    background: radial-gradient(black, transparent 60%);
+                    transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1);
+                    opacity: 0.2;
+                  "
+                ></div>
+                <img
+                  class="relative w-40"
+                  src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
+                  alt=""
+                />
+              </div>
+              <div class="relative px-6 pb-6 mt-6">
+                <div class="flex justify-between">
+                  <span class="block font-semibold text-xl text-gray-700"
+                    >Peace Lily</span
+                  >
+                </div>
+                <span class="block opacity-75 -mb-1 text-gray-700">Indoor</span>
+              </div>
+            </div>
+            <!-- Сard -->
+            <div
+              class="flex-shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg w-1/3"
+            >
+              <div class="relative pt-10 px-10 flex items-center justify-center">
+                <div
+                  class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
+                  style="
+                    background: radial-gradient(black, transparent 60%);
+                    transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1);
+                    opacity: 0.2;
+                  "
+                ></div>
+                <img
+                  class="relative w-40"
+                  src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
+                  alt=""
+                />
+              </div>
+              <div class="relative px-6 pb-6 mt-6">
+                <div class="flex justify-between">
+                  <span class="block font-semibold text-xl text-gray-700"
+                    >Peace Lily</span
+                  >
+                </div>
+                <span class="block opacity-75 -mb-1 text-gray-700">Indoor</span>
+              </div>
+            </div>
+            <!-- Сard -->
+            <div
+              class="flex-shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg w-1/3"
+            >
+              <div class="relative pt-10 px-10 flex items-center justify-center">
+                <div
+                  class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
+                  style="
+                    background: radial-gradient(black, transparent 60%);
+                    transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1);
+                    opacity: 0.2;
+                  "
+                ></div>
+                <img
+                  class="relative w-40"
+                  src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
+                  alt=""
+                />
+              </div>
+              <div class="relative px-6 pb-6 mt-6">
+                <div class="flex justify-between">
+                  <span class="block font-semibold text-xl text-gray-700"
+                    >Peace Lily</span
+                  >
+                </div>
+                <span class="block opacity-75 -mb-1 text-gray-700">Indoor</span>
+              </div>
             </div>
           </div>
-          <!-- Сard -->
-          <div
-            class="flex-shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg w-1/3"
-          >
-            <div class="relative pt-10 px-10 flex items-center justify-center">
-              <div
-                class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
-                style="
-                  background: radial-gradient(black, transparent 60%);
-                  transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1);
-                  opacity: 0.2;
-                "
-              ></div>
-              <img
-                class="relative w-40"
-                src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                alt=""
-              />
-            </div>
-            <div class="relative px-6 pb-6 mt-6">
-              <div class="flex justify-between">
-                <span class="block font-semibold text-xl text-gray-700"
-                  >Peace Lily</span
-                >
-              </div>
-              <span class="block opacity-75 -mb-1 text-gray-700">Indoor</span>
-            </div>
-          </div>
-          <!-- Сard -->
-          <div
-            class="flex-shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg w-1/3"
-          >
-            <div class="relative pt-10 px-10 flex items-center justify-center">
-              <div
-                class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
-                style="
-                  background: radial-gradient(black, transparent 60%);
-                  transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1);
-                  opacity: 0.2;
-                "
-              ></div>
-              <img
-                class="relative w-40"
-                src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                alt=""
-              />
-            </div>
-            <div class="relative px-6 pb-6 mt-6">
-              <div class="flex justify-between">
-                <span class="block font-semibold text-xl text-gray-700"
-                  >Peace Lily</span
-                >
-              </div>
-              <span class="block opacity-75 -mb-1 text-gray-700">Indoor</span>
-            </div>
-          </div>
-          <!-- Сard -->
-          <div
-            class="flex-shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg w-1/3"
-          >
-            <div class="relative pt-10 px-10 flex items-center justify-center">
-              <div
-                class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
-                style="
-                  background: radial-gradient(black, transparent 60%);
-                  transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1);
-                  opacity: 0.2;
-                "
-              ></div>
-              <img
-                class="relative w-40"
-                src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                alt=""
-              />
-            </div>
-            <div class="relative px-6 pb-6 mt-6">
-              <div class="flex justify-between">
-                <span class="block font-semibold text-xl text-gray-700"
-                  >Peace Lily</span
-                >
-              </div>
-              <span class="block opacity-75 -mb-1 text-gray-700">Indoor</span>
-            </div>
-          </div>
-          <!-- Сard -->
-          <div
-            class="flex-shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg w-1/3"
-          >
-            <div class="relative pt-10 px-10 flex items-center justify-center">
-              <div
-                class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
-                style="
-                  background: radial-gradient(black, transparent 60%);
-                  transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1);
-                  opacity: 0.2;
-                "
-              ></div>
-              <img
-                class="relative w-40"
-                src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                alt=""
-              />
-            </div>
-            <div class="relative px-6 pb-6 mt-6">
-              <div class="flex justify-between">
-                <span class="block font-semibold text-xl text-gray-700"
-                  >Peace Lily</span
-                >
-              </div>
-              <span class="block opacity-75 -mb-1 text-gray-700">Indoor</span>
-            </div>
-          </div>
-          <!-- Сard -->
-          <div
-            class="flex-shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg w-1/3"
-          >
-            <div class="relative pt-10 px-10 flex items-center justify-center">
-              <div
-                class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
-                style="
-                  background: radial-gradient(black, transparent 60%);
-                  transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1);
-                  opacity: 0.2;
-                "
-              ></div>
-              <img
-                class="relative w-40"
-                src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                alt=""
-              />
-            </div>
-            <div class="relative px-6 pb-6 mt-6">
-              <div class="flex justify-between">
-                <span class="block font-semibold text-xl text-gray-700"
-                  >Peace Lily</span
-                >
-              </div>
-              <span class="block opacity-75 -mb-1 text-gray-700">Indoor</span>
-            </div>
-          </div>
-        </div>
         </div>
       </section>
 
