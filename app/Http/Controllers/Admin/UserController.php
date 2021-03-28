@@ -17,7 +17,7 @@ class UserController extends Controller
     public function list()
     {
         $items = User::whereKeyNot(Auth::id())->orderBy('id', 'DESC')->get();
-        return view('test.admin.user.list', [
+        return view('admin.user.list', [
             'items' => $items
         ]);
     }
@@ -25,7 +25,7 @@ class UserController extends Controller
     public function form(FormRequest $request)
     {
         $item = User::findOrNew($request->id);
-        return view('test.admin.user.form', [
+        return view('admin.user.form', [
             'item' => $item,
             'roles' => Role::all()
         ]);
