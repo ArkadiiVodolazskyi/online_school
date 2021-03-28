@@ -44,9 +44,7 @@
         @endif
 
         <main>
-            <div class="wrapper">
-                {{ $slot }}
-            </div>
+            {{ $slot }}
         </main>
 
         @once

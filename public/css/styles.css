@@ -6,6 +6,7 @@ html {
 html, * {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  color: #434343;
 }
 
 body {
@@ -16,6 +17,15 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
+}
+
+section {
+  position: relative;
+  z-index: 10;
+}
+
+section > * {
+  z-index: 10;
 }
 
 a, .btn {
@@ -75,7 +85,69 @@ a, .btn {
   cursor: pointer;
   height: 1.25rem;
   margin-right: 0.5rem;
+}
+
+.checkbox input[type=checkbox]:focus{
+  --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-ring-offset-width: 0px;
+}
+
+.checkbox input[type=checkbox]{
   width: 1.25rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 300ms;
+}
+
+.card {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  --tw-gradient-from: #f3f4f6;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(243, 244, 246, 0));
+  --tw-gradient-to: #e5e7eb;
+  --tw-border-opacity: 1;
+  border-color: rgba(17, 24, 39, var(--tw-border-opacity));
+  --tw-border-opacity: 0.2;
+}
+
+.card:hover{
+  --tw-border-opacity: 0.5;
+}
+
+.card{
+  border-radius: 0.5rem;
+  border-width: 1px;
+  position: relative;
+  --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.card:hover{
+  --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.card{
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.card:hover{
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+}
+
+.card{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .inset-center {
@@ -110,12 +182,35 @@ section.how_we_teach .slick-dots {
 }
 
 section.how_we_teach .slick-dots li {
-  margin: 0 2rem;
-  padding: 1rem 2rem;
+  margin: 0 1rem;
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+}
+
+section.how_we_teach .slick-dots li.slick-active button {
+  background-color: #1098F7;
+}
+
+section.how_we_teach .slick-dots li button {
+  outline: none;
   border-radius: 10px;
-  background-color: cornflowerblue;
+  background-color: #114B5F;
   color: #fff;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  font-size: 1.5rem;
+  transition: all 0.2s linear;
+}
+
+section.how_we_teach .slick-dots li button:hover {
+  background-color: #1098F7;
 }
 
 section.courses .slick-list {
@@ -128,7 +223,9 @@ section.courses button {
   z-index: 200;
   top: 50%;
   font-size: 2rem;
-  color: blue;
+  color: #1098F7;
+  outline: none;
+  transition: all 0.2s linear;
 }
 
 section.courses button:nth-of-type(1) {
@@ -139,6 +236,38 @@ section.courses button:nth-of-type(1) {
 section.courses button:nth-of-type(2) {
   right: 0;
   transform: translate(180%, -50%);
+}
+
+section.courses button[aria-disabled=true] {
+  opacity: 0;
+}
+
+section.courses button:hover {
+  color: #114B5F;
+}
+
+section.courses button > i {
+  color: inherit;
+  font-size: 2rem;
+}
+
+.section_title {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  padding-bottom: 1rem;
+  position: relative;
+  text-align: center;
+}
+
+.section_title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 70%;
+  border-bottom: 1px solid rgba(67, 67, 67, 0.1);
 }
 
 .page_title {
@@ -380,6 +509,7 @@ a, .create_page_form input[type=submit] {
   --tw-border-opacity: 1;
   border-color: rgba(41, 41, 41, var(--tw-border-opacity));
   --tw-border-opacity: 0.3;
+  border-width: 1px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.375rem;
@@ -489,4 +619,85 @@ a, .page_item .item_delete {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   transition-duration: 300ms;
+}
+
+.simple_page .wrapper > * {
+  border-color: transparent;
+  border-width: 1px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.simple_page .wrapper h1, .simple_page .wrapper h1 > * {
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.simple_page .wrapper h2, .simple_page .wrapper h2 > * {
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.simple_page .wrapper h3, .simple_page .wrapper h3 > * {
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.simple_page .wrapper h4, .simple_page .wrapper h4 > * {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.simple_page .wrapper h5, .simple_page .wrapper h5 > * {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.simple_page .wrapper h6, .simple_page .wrapper h6 > * {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.simple_page .wrapper ul {
+  list-style-type: disc;
+}
+
+.simple_page .wrapper ol {
+  list-style-type: decimal;
+}
+
+.simple_page .wrapper li {
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
+}
+
+.simple_page .wrapper table td {
+  --tw-border-opacity: 1;
+  border-color: rgba(41, 41, 41, var(--tw-border-opacity));
+  --tw-border-opacity: 0.3;
+  border-width: 1px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
+.simple_page .wrapper img, .simple_page .wrapper video {
+  display: inline-block;
+  margin: 0.25rem;
+  vertical-align: top;
 }
