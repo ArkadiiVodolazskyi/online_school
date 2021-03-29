@@ -18,9 +18,11 @@ Route::prefix('/admin')->middleware(['can:use admin panel'])->group(function() {
     Route::middleware(['can:view pages'])->get('/home', function () {
         return view('home');
     })->name('home');
+});
 
 Route::prefix('/admin')->middleware(['auth:sanctum', 'verified', 'can:use admin panel'])->group(function() {
-    Route::get('/profile', [UserProfileController::class, 'show']})->name('admin.profile.show');
+
+    Route::get('/profile', [UserProfileController::class, 'show'])->name('admin.profile.show');
 
     Route::middleware(['can:view pages'])->get('/pages', [AdminPageController::class, 'list']);
     Route::middleware(['can:update pages'])->get('/page', [AdminPageController::class, 'form']);

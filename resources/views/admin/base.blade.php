@@ -9,6 +9,9 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+        {{-- Custom styles --}}
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
         @livewireStyles
 
         <!-- Scripts -->
@@ -18,18 +21,8 @@
         <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
-        <style media="screen">
-            .html_component h1 {
-                font-size: 4rem;
-                font-weight: bold;
-            }
-
-            .html_component p {
-                color: red;
-            }
-        </style>
     </head>
-    <body class="font-sans antialiased">
+    <body>
         <div class="min-h-screen bg-gray-100 pb-12">
             @livewire('navigation-menu')
 
