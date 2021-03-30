@@ -1,6 +1,7 @@
 <x-admin-app-layout>
     <x-slot name="header">
         <x-tag.h1>{{ $item->name ?? 'User' }}</x-tag.h1>
+        <a href="/admin/users">back</a>
     </x-slot>
 
     <x-tag.block>
