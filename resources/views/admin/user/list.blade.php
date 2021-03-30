@@ -1,6 +1,7 @@
 <x-admin-app-layout>
     <x-slot name="header">
         <x-tag.h1>Users</x-tag.h1>
+        <a href="user">new user</a>
     </x-slot>
     <x-tag.block>
         <x-tag.tile>
@@ -19,7 +20,24 @@
                             <x-tag.td>{{ $item->roles->map(function($item) {
                                 return $item->name;
                             })->join(', ') }}</x-tag.td>
-                            <x-tag.td><a href="user?id={{ $item->id }}">edit</a> | <a href="delete_user?id={{ $item->id }}">delete</a></x-tag.td>
+                            <x-tag.td><a href="user?id={{ $item->id }}">edit</a> |
+                                <a x-data="deleteButton()" x-on:click="confirmDelete" href="delete_user?id={{ $item->id }}">delete</a>
+                                @once
+                                    @push('footer_scripts')
+                                        <script>
+                                            function deleteButton() {
+                                                return {
+                                                    confirmDelete: function(ev) {
+                                                        if (!confirm('Are you sure?')) {
+                                                            ev.preventDefault();
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        </script>
+                                    @endpush
+                                @endonce
+                            </x-tag.td>
                         </x-tag.tr>
                     @endforeach
                 </x-tag.table>
