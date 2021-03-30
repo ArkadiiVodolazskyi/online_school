@@ -1,10 +1,10 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="border-b border-gray-100 bg-gradient-to-l from-blue-500 to-blue-700 shadow-lg">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between w-full h-16">
+        <div class="flex justify-between w-full">
             <div class="w-full flex justify-between items-center">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
+                <div class="flex-shrink-0 flex items-center hover:bg-white rounded-full transition-all duration-300">
                     <a href="{{ route('dashboard') }}">
                         <img src="{{ URL::asset('/img/favicon.svg') }}" alt="logo" class="w-10 h-10">
                     </a>
@@ -17,18 +17,20 @@
                     </x-jet-nav-link>
                 </div> --}}
 
-                <div class="flex items-center">
-                    <a href="{{ route('home') }}">Главная</a>
-                    <a href="/admin/users" class="ml-4">Пользователи</a>
-                    <a href="/admin/pages" class="ml-4">Страницы</a>
-                    <a href="{{ route('dashboard') }}" class="ml-4">Дашборд</a>
-                    <a href="/user/profile" class="ml-4">Профиль</a>
+                <div class="flex items-center h-full font-semibold text-white">
+                    <a href="{{ route('home') }}" class="text-white hover:text-blue-600 hover:bg-white inline-block px-4 py-4 transition-all duration-300 rounded-xl">Главная</a>
+                    <a href="/admin/users" class="text-white hover:text-blue-600 hover:bg-white inline-block px-4 py-4 transition-all duration-300 rounded-xl {{ Request::is('admin/users') ? 'bg-white text-blue-600' : '' }}">Пользователи</a>
+                    <a href="/admin/pages" class="text-white hover:text-blue-600 hover:bg-white inline-block px-4 py-4 transition-all duration-300 rounded-xl {{ Request::is('admin/pages') ? 'bg-white text-blue-600' : '' }}">Страницы</a>
+                    <a href="{{ route('dashboard') }}" class="text-white hover:text-blue-600 hover:bg-white inline-block px-4 py-4 transition-all duration-300 rounded-xl {{ Request::is('dashboard') ? 'bg-white text-blue-600' : '' }}">Дашборд</a>
+                    <a href="/user/profile" class="text-white hover:text-blue-600 hover:bg-white inline-block px-4 py-4 transition-all duration-300 rounded-xl {{ Request::is('user/profile') ? 'bg-white text-blue-600' : '' }}">Профиль</a>
                     <!-- Authentication -->
-                    <form method="POST" action="{{ route('logout') }}" class="ml-4">
+                    <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <x-jet-dropdown-link href="{{ route('logout') }}"
-                                 onclick="event.preventDefault();
-                                        this.closest('form').submit();">
+                        <x-jet-dropdown-link
+                                href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                this.closest('form').submit();"
+                                class="text-white hover:text-blue-600 hover:bg-white inline-block px-2 py-4 transition-all duration-300 rounded-xl">
                             {{ __('Выйти') }}
                         </x-jet-dropdown-link>
                     </form>
@@ -37,7 +39,7 @@
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                 <a href="/user/profile">
-                                    <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                                    <img class="h-9 w-9 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                                 </a>
                             @endif
                         </x-slot>
