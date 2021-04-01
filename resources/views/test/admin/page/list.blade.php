@@ -1,8 +1,6 @@
 <x-test-admin-app-layout>
-    <h1 class="page_title">
-        <a href="{{ route('dashboard') }}" class="back_to_dashboard">Дашборд</a>
-        Pages
-    </h1>
+    @livewire('navigation-menu')
+
     @foreach ($items as $item)
         <div class="page_item">
             <a href="page?id={{ $item->id }}" class="item_title">
@@ -19,4 +17,6 @@
             </a>
         </div>
     @endforeach
+
+    <a href="/admin/page">Добавить новую страницу</a>
 </x-test-admin-app-layout>

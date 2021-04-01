@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="border-b border-gray-100 bg-gradient-to-l from-blue-500 to-blue-700 shadow-lg">
+<nav x-data="{ open: false }" class="bg-gradient-to-l from-blue-500 to-blue-700 shadow-lg">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between w-full">
@@ -21,6 +21,7 @@
                     <a href="{{ route('home') }}" class="text-white hover:text-blue-600 hover:bg-white inline-block px-4 py-4 transition-all duration-300 rounded-xl">Главная</a>
                     <a href="/admin/users" class="text-white hover:text-blue-600 hover:bg-white inline-block px-4 py-4 transition-all duration-300 rounded-xl {{ Request::is('admin/users') ? 'bg-white text-blue-600' : '' }}">Пользователи</a>
                     <a href="/admin/pages" class="text-white hover:text-blue-600 hover:bg-white inline-block px-4 py-4 transition-all duration-300 rounded-xl {{ Request::is('admin/pages') ? 'bg-white text-blue-600' : '' }}">Страницы</a>
+                    <a href="/admin/page" class="text-white hover:text-blue-600 hover:bg-white inline-block px-4 py-4 transition-all duration-300 rounded-xl {{ Request::is('admin/page') ? 'bg-white text-blue-600' : '' }}">Добавить страницу</a>
                     <a href="{{ route('dashboard') }}" class="text-white hover:text-blue-600 hover:bg-white inline-block px-4 py-4 transition-all duration-300 rounded-xl {{ Request::is('dashboard') ? 'bg-white text-blue-600' : '' }}">Дашборд</a>
                     <a href="/user/profile" class="text-white hover:text-blue-600 hover:bg-white inline-block px-4 py-4 transition-all duration-300 rounded-xl {{ Request::is('user/profile') ? 'bg-white text-blue-600' : '' }}">Профиль</a>
                     <!-- Authentication -->

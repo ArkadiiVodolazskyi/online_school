@@ -1,8 +1,6 @@
 <x-test-admin-app-layout>
-    <h1 class="page_title">
-        <a href="{{ route('dashboard') }}" class="back_to_dashboard">Дашборд</a>
-        Edit {{ $item->title }}
-    </h1>
+    @livewire('navigation-menu')
+
     <form class="create_page_form" action="" method="post">
         @csrf
         <input type="hidden" name="id" value="{{ $item->id }}">
